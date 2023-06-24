@@ -45,10 +45,12 @@ export default class ToDoList extends React.Component{
     // }
 
     render(){
-        const taskObj = Tasks(this.state.listArr,this.state.doneTask)
+
       return(
               <ol>
-                  {taskObj.tasks}
+                  {this.state.listArr.map((taskE)=><li onChange={()=>{
+
+                  }}><Tasks task={taskE.task}/></li>)}
 
                     <Button doneTasks={this.state.doneTask}/>
 
