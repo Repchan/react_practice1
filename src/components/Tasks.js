@@ -23,7 +23,8 @@ let Tasks = (listArr, doneTask) =>{
                 <label htmlFor={`${index}`}>{task.task}</label>
             </form>
         ))
-    let tasks =taskList.map((task)=><li>{task}</li>);
+    let tasks = []
+    taskList.forEach((task,index)=>tasks.push(<li key={index}>{task}</li>));
     console.log(num)
     return  {tasks,num};
 }
